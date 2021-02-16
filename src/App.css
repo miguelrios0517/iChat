@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  height: 4rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 0px 40px;
+  padding-bottom: 3px;
+  font-family: roboto;
+  font-size: 1.8em;
+  color: #48a4e6;
+}
+
+.logo {
+  height: 2.25rem;
+  width: 1.5rem;
+  margin-right: 13px;
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1d9059de-ffc4-4479-9fcf-03972a53ab72/db3t8gg-1f7bfc1b-6181-4459-b74c-9bd8ee1f11d3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMWQ5MDU5ZGUtZmZjNC00NDc5LTlmY2YtMDM5NzJhNTNhYjcyXC9kYjN0OGdnLTFmN2JmYzFiLTYxODEtNDQ1OS1iNzRjLTliZDhlZTFmMTFkMy5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.YNnfYdYvhq2FpEpSStb1IUG6UB_6X4CIgT9rZA07QTE);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: rotate(70deg);
+}
