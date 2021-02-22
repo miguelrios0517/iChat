@@ -30,3 +30,9 @@
   background-size: cover;
   transform: rotate(70deg);
 }
+
+.text-input { 
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid white; 
+  height: 2.5rem;
+}

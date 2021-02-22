@@ -1,4 +1,5 @@
 import './App.css';
+import TextInput from './TextInput';
 
 import TextInput from './TextInput';
 
@@ -10,7 +11,7 @@ function App() {
         iChat
       </header>
 
-      <TextInput />
+      <TextInput/>
       
     </div>
   );
