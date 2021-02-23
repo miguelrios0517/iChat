@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=DotGothic16&family=Indie+Flower&family=Open+Sans&display=swap");
+
 .App {
   text-align: center;
   background: rgb(0, 0, 0);
@@ -6,17 +9,18 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .header {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  height: 4rem;
+  height: 2.5rem;
   display: flex;
-  align-items: flex-end;
-  padding: 0px 40px;
-  padding-bottom: 3px;
-  font-family: roboto;
-  font-size: 1.8em;
+  align-items: center;
+  padding-left: 40px;
+  padding-top: 20px;
+  font-family: "Indie Flower", cursive;
+  font-size: 2.5em;
   color: #48a4e6;
 }
 
@@ -31,8 +35,9 @@
   transform: rotate(70deg);
 }
 
-.text-input { 
+.text-input {
   background: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid white; 
+  border-top: 1px solid white;
   height: 2.5rem;
+  font-family: "Open Sans", sans-serif;
 }

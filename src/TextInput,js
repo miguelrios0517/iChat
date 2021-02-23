@@ -1,8 +1,0 @@
-function TextInput() {
-    return <footer className="text-input">
-
-    </footer>
-
-}
-
-export default TextInput
