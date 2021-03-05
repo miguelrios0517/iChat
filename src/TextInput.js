@@ -19,13 +19,13 @@ function TextInput(props) {
 
 
     return <footer className = "text-input">
-        <input 
+        <input className = "input"
             placeholder = "Write your message"
             value = {text}
             onChange={e=> setText(e.target.value)}
             onKeyPress = {keyPressed}
         />
-        <button onClick = {keyPressed} disabled = {!text}>
+        <button className = "send-button" onClick = {keyPressed} disabled = {!text}>
             send
         </button>
     </footer>
