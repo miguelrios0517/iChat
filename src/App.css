@@ -4,7 +4,7 @@
 .App {
   text-align: center;
   background: rgb(0, 0, 0);
-  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  background: linear-gradient(90deg, #E7FFD9 0%, #d9e7ff 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -47,12 +47,13 @@
 }
 
 .message {
-  background: black;
+  background: rgb(165, 151, 253);
   color: white;
   border-radius: 10px;
   margin: 4px;
   display: inline-block;
   padding: 4px 12px;
+
 }
 
 .text-input {

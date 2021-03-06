@@ -26,7 +26,7 @@ function TextInput(props) {
             onKeyPress = {keyPressed}
         />
         <button className = "send-button" onClick = {keyPressed} disabled = {!text}>
-            send
+            <p>&#9824</p>
         </button>
     </footer>
 

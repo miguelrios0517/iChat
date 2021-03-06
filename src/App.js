@@ -1,5 +1,6 @@
 import './App.css';
 import TextInput from './TextInput';
+import Message from './message.js'
 import { useState } from 'react';
 
 function App() {
@@ -13,11 +14,7 @@ function App() {
 
       <main className = "messages">
         {messages.map((m,i)=> {
-          return <div className = "message-row">
-            <div className = "message">
-              {m.text}
-            </div>
-          </div>
+          return <Message key {...i} {...m} />
         })}
 
       </main>
