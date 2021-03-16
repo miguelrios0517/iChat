@@ -4,7 +4,7 @@
 .App {
   text-align: center;
   background: rgb(0, 0, 0);
-  background: linear-gradient(90deg, #E7FFD9 0%, #d9e7ff 100%);
+  background: linear-gradient(90deg, #e7ffd9 0%, #d9e7ff 100%);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -50,10 +50,18 @@
   background: rgb(165, 151, 253);
   color: white;
   border-radius: 10px;
-  margin: 4px;
+  margin: 7px;
   display: inline-block;
   padding: 4px 12px;
+  position: relative;
+}
 
+.message-name {
+  position: absolute;
+  top: -9px;
+  font-size: 0.45rem;
+  color: black;
+  font-weight: old;
 }
 
 .text-input {
@@ -95,4 +103,8 @@
   border: 1px solid white;
   color: white;
   padding-left: 10px;
+}
+
+.namePicker {
+  justify-self: end;
 }
