@@ -1,12 +1,13 @@
-import './App.css';
-import TextInput from './TextInput.js';
-import Message from './message.js'
-import NamePicker from './NamePicker.js'
-import { useState } from 'react';
+import './App.css'
+import TextInput from './TextInput'
+import Message from './message'
+import NamePicker from './NamePicker'
+import { useState } from 'react'
+import {db, useDB} from '/db'
 
 
 function App() {
-  const [messages, setMessages] = useState([{text:'hello'}]);
+  const messages = useDB()
   const [username, setUsername] = useState('')
 
   return (
@@ -26,7 +27,7 @@ function App() {
 
       {/*This is a custom tag with a send function passed in as props*/}
       <TextInput
-        send={(t)=> setMessages([...messages, {text:t, name:username, date:new Date()}])} 
+        send={(t)=> db.send({text:t, name:username, date:new Date()})} 
       />
       
     </div>
