@@ -1,6 +1,5 @@
-
 import {useState, useEffect} from 'react'
-import * as firebase from "firebase/app"
+import firebase from "firebase"
 import "firebase/firestore"
 import "firebase/storage"
 
@@ -13,7 +12,7 @@ function useDB(room) {
     function add(m) {
         setMessages(current => {
             const msgs = [m, ...current]
-            msgs.sort((a,b)=> b.ts.seconds - a.ts.seconds)
+            msgs.sort((a,b)=> (b.date && b.date.seconds) - (a.date && a.date.seconds))
             return msgs
         })
     }
@@ -22,14 +21,16 @@ function useDB(room) {
     }
     
     useEffect(() => {
-        store.collection(coll)
-        .where('room','==',room)
-        .onSnapshot(snap=> snap.docChanges().forEach(c=> {
+        const collection = room ? 
+            store.collection(coll).where('room','==',room) :
+            store.collection(coll)
+        
+        collection.onSnapshot(snap=> snap.docChanges().forEach(c=> {
             const {doc, type} = c
             if (type==='added') add({...doc.data(),id:doc.id})
             if (type==='removed') remove(doc.id)
         }))
-    }, [])
+    }, [room])
     return messages
 }
 
@@ -44,14 +45,13 @@ db.delete = function(id) {
 export { db, useDB }
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDWXVgUqm3xATyzqUqTxcpvsW7U804ctXI",
-    authDomain: "chatter20202020.firebaseapp.com",
-    databaseURL: "https://chatter20202020.firebaseio.com",
-    projectId: "chatter20202020",
-    storageBucket: "chatter20202020.appspot.com",
-    messagingSenderId: "630230183323",
-    appId: "1:630230183323:web:cc967f51fc79e394ca053e"
-}
+    apiKey: "AIzaSyCxnHdHGicbw16DmQfEbNVy7XD6ENprVNQ",
+    authDomain: "chatter2021-2b8fb.firebaseapp.com",
+    projectId: "chatter2021-2b8fb",
+    storageBucket: "chatter2021-2b8fb.appspot.com",
+    messagingSenderId: "778098356347",
+    appId: "1:778098356347:web:c396b31d7a0a5c0c6c32de"
+};
 
 firebase.initializeApp(firebaseConfig)
 store = firebase.firestore()

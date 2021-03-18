@@ -37,13 +37,14 @@
 
 .messages {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   flex: 1;
-  justify-content: flex-end;
+  overflow: auto;
 }
 
 .message-row {
   width: 100%;
+  display: flex;
 }
 
 .message {

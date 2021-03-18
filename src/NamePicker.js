@@ -2,7 +2,8 @@ import{useState} from 'react'
 
 function NamePicker(props) {
     const[showInput, setShowInput] = useState(false)
-    const[username, setUsername] = useState(localStorage.getItem('username') || '')
+    const[username, setUsername] = useState(
+        localStorage.getItem('username') || '')
 
     function save(){
         props.saveName(username)
